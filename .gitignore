@@ -39,3 +39,14 @@
 
 # debug information files
 *.dwo
+
+# build files
+build/*
+
+# editor files
+.idea/
+.vs/
+.cache/
+
+#objects in resource folder
+!resources/objects/*
