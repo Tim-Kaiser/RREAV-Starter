@@ -25,7 +25,7 @@ int main() {
   while (window.running()) {
     int t = clock.getElapsedTime().asMilliseconds();
     shaderManager.SendUniformData("u_time", t);
-    audioManager.update();
+    audioManager.update(true);
 
     mesh.render();
     window.update();
