@@ -6,13 +6,14 @@ on:
   push:
     branches: [main]
 
-concurrency:
-  group: ${{ github.ref }}
-  cancel-in-progress: true
+
 
 jobs:
   build-windows:
     runs-on: windows-2022
+    concurrency:
+      group: ${{ github.ref }}
+      cancel-in-progress: true
     steps:
       - uses: actions/checkout@v6
 
